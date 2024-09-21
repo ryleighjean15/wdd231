@@ -114,10 +114,6 @@ main img {
     align-items: center;
 }
 
-/* main {
-    grid-column: 2/3;
-    margin: 1rem;
-} */
 
 aside {
     width: 20rem;
@@ -193,13 +189,33 @@ footer p {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) 
     .footer-container {
         flex-direction: column; 
         text-align: center;
-    }
+}
 
-    footer p {
+.course-card {
+     border: 1px solid #ccc;
+     padding: 1rem;
+     margin: 1rem;
+     border-radius: 8px;
+     width: 150px;
+     display: inline-block;
+     text-align: center;
+ }
+ 
+.completed {
+     background-color: lightgreen;
+     color: darkgreen;
+ }
+ 
+.incomplete {
+     background-color: lightcoral;
+     color: darkred;
+ }
+ 
+footer p {
         margin-bottom: 0.5rem;
     }
-}
+
