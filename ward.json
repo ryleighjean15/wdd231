@@ -1,0 +1,29 @@
+{
+    "familyName": "Jenkins",
+    "dateMovedIn": "2024-09-24",
+    "numberOfPeople": 4,
+    "visitedByBishopric": true,
+    "familyMembers": [
+        {
+        "name": "James",
+        "gender": "Male",
+        "birthdate": "1980-05-06"
+      },
+      {
+        "name": "Nelly",
+        "gender": "Female",
+        "birthdate": "1982-08-22"
+      },
+      {
+        "name": "Emily",
+        "gender": "Female",
+        "birthdate": "2010-02-15"
+      },
+      {
+        "name": "Michael",
+        "gender": "Male",
+        "birthdate": "2015-07-30"
+      }
+    ]
+  }
+  
