@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>WDD 131 - Home page - Ryleigh Rowell</title>
+        <meta name="description" content="WDD131 - Dynamic Web Fundamentals - Ryleigh Rowell - home page with about info, place of residence, and links to web resources.">
+        <meta name="author" content="Ryleigh Rowell">
+        <link rel="stylesheet" href="chamber/styles/directory.css">
+        <link rel="icon" href="images/favicon.ico">
+        <meta property="og:title" content="WDD 231 Directory Page" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="file:///Users/ryleighrowell/wdd231/images/az_img2.jpg" />
+        <meta property="og:url" content="https://www.facebook.com/" />
+    </head>
+
+    <body>
+    
+        <header>
+            <div class="logo">
+                <img src="chamber/images/chamber.png" alt="Lakeside Chamber of Commerce">
+                <h1>Lakeside Chamber of Commerce</h1>
+            </div>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Directory</a>
+                <a href="#">Join</a>
+                <a href="#">Discover</a>
+            </nav>
+        </header>
+    
+        <section class="hero">
+            <img src="hero-placeholder.jpg" alt="Scalable, responsive hero image">
+            <button>Keynote Tickets</button>
+        </section>
+    
+        <main>
+           
+            <section class="info-section">
+                <div class="events">
+                    <h2>Events</h2>
+                 
+                </div>
+                <div class="weather">
+                    <h2>Current Weather</h2>
+                    <p>83°F</p>
+                    <p>Partly Cloudy</p>
+                    <p>High: 85°F, Low: 52°F</p>
+                    <p>Humidity: 2%</p>
+                </div>
+                <div class="forecast">
+                    <h2>Weather Forecast</h2>
+                    <p>Tuesday: 90°F</p>
+                    <p>Wednesday: 89°F</p>
+                    <p>Thursday: 88°F</p>
+                </div>
+            </section>
+    
+           
+            <section class="business-section">
+                <div class="business-card">
+                    <img src="business1-placeholder.png" alt="Business Logo">
+                    <h3>Business Name</h3>
+                    <p>Business Tag Line</p>
+                    <p>Email: info@gmail.com</p>
+                    <p>Phone: 800-555-1234</p>
+                    <p>URL: <a href="#">mybusiness.com</a></p>
+                </div>
+                <div class="business-card">
+                    <img src="business2-placeholder.png" alt="Business Logo">
+                    <h3>Business Name</h3>
+                    <p>Business Tag Line</p>
+                    <p>Email: info@gmail.com</p>
+                    <p>Phone: 800-555-1234</p>
+                    <p>URL: <a href="#">mybusiness.com</a></p>
+                </div>
+                <div class="business-card">
+                    <img src="business3-placeholder.png" alt="Business Logo">
+                    <h3>Business Name</h3>
+                    <p>Business Tag Line</p>
+                    <p>Email: info@gmail.com</p>
+                    <p>Phone: 800-555-1234</p>
+                    <p>URL: <a href="#">mybusiness.com</a></p>
+                </div>
+            </section>
+        </main>
+    
+        <script>
+            document.getElementById('lastModified').textContent = document.lastModified;
+        </script>
+
+<div id="toggleButtons">
+    <button id="gridViewBtn">Grid View</button>
+    <button id="listViewBtn">List View</button>
+  </div>
+  <div id="memberDisplay"></div>
+  
+  <script>
+    async function fetchMembers() {
+      const response = await fetch('data/members.json');
+      const members = await response.json();
+      return members;
+    }
+  
+
+    function displayMembers(members, viewType = 'grid') {
+      const memberDisplay = document.getElementById('memberDisplay');
+      memberDisplay.innerHTML = ''; 
+  
+      members.forEach(member => {
+        const memberDiv = document.createElement('div');
+        memberDiv.classList.add(viewType === 'grid' ? 'grid-item' : 'list-item');
+  
+        memberDiv.innerHTML = `
+          <img src="${member.image}" alt="${member.name} logo">
+          <h2>${member.name}</h2>
+          <p>${member.address}</p>
+          <p>${member.phone}</p>
+          <p><a href="${member.website}" target="_blank">${member.website}</a></p>
+          <p>Membership Level: ${member.membershipLevel}</p>
+          <p>${member.description}</p>
+        `;
+  
+        memberDisplay.appendChild(memberDiv);
+      });
+    }
+  
+    document.getElementById('gridViewBtn').addEventListener('click', () => {
+      fetchMembers().then(members => displayMembers(members, 'grid'));
+    });
+  
+    document.getElementById('listViewBtn').addEventListener('click', () => {
+      fetchMembers().then(members => displayMembers(members, 'list'));
+    });
+  
+
+    fetchMembers().then(members => displayMembers(members, 'grid'));
+  </script>
+  
+    <footer>
+      <div class="footer-container">
+          <p>&copy; 2025 Ryleigh Rowell</p>
+          <p>🌍 Arizona</p>
+          <p>Last Update: <span id="lastModified"></span></p>
+      </div>
+    </footer>
+
+    </body>
+</html>
