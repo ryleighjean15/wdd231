@@ -9,11 +9,11 @@ header {
     background-color: steelblue;
     padding: 1rem;
     display: flex;
-    flex-direction: column; /* Column layout for name and profile pic */
+    flex-direction: column; 
     align-items: center;
 }
 
-/* Flexbox for aligning image and name */
+
 .header-top {
     display: flex;
     align-items: center;
@@ -24,12 +24,25 @@ header img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    margin-right: 1rem; /* Spacing between image and name */
+    margin-right: 1rem; 
 }
 
 header h1 {
     color: rgb(234, 240, 244);
     font-size: 30px;
+}
+
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack bars vertically */
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px; /* Width of each bar */
+    height: 3px; /* Height of each bar */
+    background-color: #333; /* Color of the bars */
+    margin: 3px 0; /* Space between bars */
 }
 
 /* Center the navigation links below the image and name */
@@ -51,6 +64,10 @@ nav a {
     text-align: center;
 }
 
+nav a:hover {
+    background-color: #333; /* Dark background on hover */
+    color: white; /* Change text color on hover */
+}
 
 h2 {
     position: absolute;
@@ -131,26 +148,26 @@ aside p {
     padding: 2rem;
     text-align: center;
     margin: 2rem auto;
-    max-width: 900px; /* Optional: to keep the grid centered and at a readable width */
+    max-width: 900px; 
     border: 1px solid #ccc;
 }
 
 .course-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
-    gap: 1rem; /* Space between grid items */
+    gap: 1rem; 
 }
 
-/* Individual course items */
+
 .course-item {
-    background-color: #fff; /* White background for the course boxes */
+    background-color: #fff; 
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     text-align: center;
 }
 
-/* Optional: Styling for the course titles */
+
 .course-item h3 {
     font-size: 1.5rem;
     color: #333;
@@ -167,7 +184,7 @@ aside p {
 
 
 footer {
-    background-color: #002f4f; /* Dark blue background */
+    background-color: #002f4f; 
     padding: 1rem;
     color: white;
     text-align: center;
@@ -189,10 +206,11 @@ footer p {
 }
 
 
-@media only screen and (max-width: 600px) 
+@media only screen and (max-width: 600px){ 
     .footer-container {
         flex-direction: column; 
         text-align: center;
+}
 }
 
 .course-card {
@@ -219,3 +237,20 @@ footer p {
         margin-bottom: 0.5rem;
     }
 
+@media only screen and (max-width: 600px) {
+    nav {
+        display: none; /* Hide nav by default */
+        flex-direction: column; /* Stack items vertically */
+        width: 100%;
+        background-color: #eee;
+    }
+
+    .hamburger {
+        display: flex; /* Display as flex to align bars */
+    }
+
+    /* Show nav when toggled */
+    nav.show {
+        display: flex;
+    }
+}
