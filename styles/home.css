@@ -254,3 +254,33 @@ footer p {
         display: flex;
     }
 }
+
+/* Style the hamburger icon */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Style the navigation menu */
+.nav-menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Hide the menu in mobile view */
+@media only screen and (max-width: 600px) {
+    .nav-menu {
+        display: none; /* Hidden by default */
+        flex-direction: column; /* Stack menu items */
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu */
+    }
+
+    .nav-menu.show {
+        display: block; /* Show menu when the hamburger is clicked */
+    }
+}
