@@ -32,7 +32,7 @@
         </header>
     
         <section class="hero">
-            <img src="hero-placeholder.jpg" alt="hero image">
+            <img src="images/hero.jpg" alt="hero image">
             <button>Keynote Tickets</button>
         </section>
     
@@ -41,7 +41,8 @@
             <section class="info-section">
                 <div class="events">
                     <h2>Events</h2>
-                 
+                    <p>Kids Fish Free: Oct 4-13</p>
+                    <p>Oktoberfest: Oct 20th</p>
                 </div>
                 <div class="weather">
                     <h2>Current Weather</h2>
@@ -61,40 +62,43 @@
            
             <section class="business-section">
                 <div class="business-card">
-                    <img src="business1-placeholder.png" alt="Business Logo">
-                    <h3>Business Name</h3>
-                    <p>Business Tag Line</p>
-                    <p>Email: info@gmail.com</p>
+                    <img src="images/sherrifdeptlogo.jpg" alt="Business Logo">
+                    <h3>Sherrifs Dept</h3>
+                    <p>Email: lakesidePD@gmail.com</p>
                     <p>Phone: 800-555-1234</p>
+                    <p>URL: <a href="#">LakesidePD.com</a></p>
+                </div>
+                <div class="business-card">
+                    <img src="images/electriclogo.jpg" alt="Business Logo">
+                    <h3>Lakeside Electrician</h3>
+                    <p>Email: electric@gmail.com</p>
+                    <p>Phone: 800-620-5908</p>
                     <p>URL: <a href="#">mybusiness.com</a></p>
                 </div>
                 <div class="business-card">
-                    <img src="business2-placeholder.png" alt="Business Logo">
-                    <h3>Business Name</h3>
-                    <p>Business Tag Line</p>
-                    <p>Email: info@gmail.com</p>
-                    <p>Phone: 800-555-1234</p>
-                    <p>URL: <a href="#">mybusiness.com</a></p>
-                </div>
-                <div class="business-card">
-                    <img src="business3-placeholder.png" alt="Business Logo">
-                    <h3>Business Name</h3>
-                    <p>Business Tag Line</p>
-                    <p>Email: info@gmail.com</p>
-                    <p>Phone: 800-555-1234</p>
+                    <img src="images/plumbinglogo.jpg" alt="Business Logo">
+                    <h3>Pinetop Plumbing</h3>
+                    <p>Email: ptopplumbing@gmail.com</p>
+                    <p>Phone: 800-778-0023</p>
                     <p>URL: <a href="#">mybusiness.com</a></p>
                 </div>
             </section>
         </main>
     
-        <span id="lastModified"></span>
+        
 
 
 <div id="toggleButtons">
     <button id="gridViewBtn">Grid View</button>
     <button id="listViewBtn">List View</button>
   </div>
-  <div id="memberDisplay"></div>
+  <div id="memberDisplay" class="grid-view">
+    <div class="member">Member 1</div>
+    <div class="member">Member 2</div>
+    <div class="member">Member 3</div>
+    <div class="member">Member 4</div>
+  </div>
+
   
   <script>
     async function fetchMembers() {
@@ -145,6 +149,10 @@
           <p>Last Update: <span id="lastModified"></span></p>
       </div>
     </footer>
+
+    <script>
+      document.getElementById('lastModified').textContent = document.lastModified;
+  </script>
 
     </body>
 </html>

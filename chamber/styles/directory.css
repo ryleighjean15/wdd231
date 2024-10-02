@@ -55,7 +55,7 @@ nav a {
 
 .hero img {
     width: 100%;
-    max-width: 1200px;
+    max-width: 800px;
     height: auto;
 }
 
@@ -87,6 +87,31 @@ nav a {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Base style for members */
+#memberDisplay {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Grid view */
+  .grid-view .member {
+    flex: 1 1 25%; /* Adjust percentage for the number of columns you want */
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 5px;
+    text-align: center;
+  }
+  
+  /* List view */
+  .list-view .member {
+    flex: 1 1 100%; /* Full-width for list view */
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 5px;
+    text-align: center;
+  }
+  
 
 .business-section {
     display: grid;
