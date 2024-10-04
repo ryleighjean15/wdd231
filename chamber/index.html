@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>WDD 131 - Home page - Ryleigh Rowell</title>
+        <meta name="description" content="WDD131 - Dynamic Web Fundamentals - Ryleigh Rowell - home page with about info, place of residence, and links to web resources.">
+        <meta name="author" content="Ryleigh Rowell">
+        <meta property="og:title" content="WDD 231 Directory Page" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="file:///Users/ryleighrowell/wdd231/images/az_img2.jpg" />
+        <meta property="og:url" content="https://www.facebook.com/" />
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="icon" href="images/favicon.ico">
+        
+    </head>
+
+    <body>
+    
+        <header>
+            <div class="logo">
+                <img src="images/chamber.png" alt="Lakeside Chamber of Commerce">
+                <h1>Lakeside Chamber of Commerce</h1>
+            </div>
+            <nav>
+              <a href="https://ryleighjean15.github.io/wdd231/">Home</a>   
+              <a href="https://ryleighjean15.github.io/wdd231/chamber/directory.html">Chamber</a>
+              <a href="https://github.com/ryleighjean15/wdd231">GitHub</a>
+              <a href="https://www.linkedin.com/in/ryleigh-rowell-947905277/">LinkedIn</a>
+            </nav>
+        </header>
+    
+        <section class="hero">
+            <img src="images/hero.jpg" alt="hero image">
+        </section>
+    
+        <main>
+           
+            <section class="info-section">
+                <div class="events">
+                    <h2>Current Events</h2>
+                    <p>Business Expo – November 15, 2024 Join us for the annual Business Expo where local companies showcase their services. Reserve your booth today!</p>
+                    <p>Oktoberfest: Oct 20th</p>
+                    <p>Ribbon Cutting: Nina's Coffee House – October 10, 2024 Celebrate the opening of El Salvador Coffee House, a new member of our Chamber! Location: Downtown Plaza.</p>
+                    <p>Chamber Grant Program – Applications Open Small businesses in Lakeside are eligible for a $10,000 development grant. Apply by December 1, 2024.</p>
+                </div>
+                <div class="memberSpotlight">
+                    <h2>Member Spotlights</h2>
+                    <div id="spotlightContainer"></div>
+        
+                </div>
+                <div class="forecast">
+                    <h2>Weather Forecast</h2>
+                    <p id="town"></p>
+                    <p id="current-temp"></p>
+                    <p id="description"></p>
+                    <p id="weather-icon"></p>
+                </div>
+            </section>
+    
+            <section class="cta-section">
+                <div class="cta-content">
+                    <h2>Join the Lakeside Chamber of Commerce</h2>
+                    <p>Become a member today and help build a stronger community while gaining exclusive benefits for your business.</p>
+                    <a href="join.html" class="cta-button">Join Now</a>
+                </div>
+            </section>
+            
+
+            <section class="business-section">
+                <div class="business-card">
+                    <img src="images/sherrifdeptlogo.jpg" alt="Business Logo">
+                    <h3>Sherrifs Dept</h3>
+                    <p>Email: lakesidePD@gmail.com</p>
+                    <p>Phone: 800-555-1234</p>
+                    <p>URL: <a href="#">LakesidePD.com</a></p>
+                </div>
+                <div class="business-card">
+                    <img src="images/electriclogo.jpg" alt="Business Logo">
+                    <h3>Lakeside Electrician</h3>
+                    <p>Email: electric@gmail.com</p>
+                    <p>Phone: 800-620-5908</p>
+                    <p>URL: <a href="#">mybusiness.com</a></p>
+                </div>
+                <div class="business-card">
+                    <img src="images/plumbinglogo.jpg" alt="Business Logo">
+                    <h3>Pinetop Plumbing</h3>
+                    <p>Email: ptopplumbing@gmail.com</p>
+                    <p>Phone: 800-778-0023</p>
+                    <p>URL: <a href="#">mybusiness.com</a></p>
+                </div>
+            </section>
+        </main>
+    
+        
+
+        <footer>
+            <div class="footer-container">
+                <p>&copy; 2025 Ryleigh Rowell</p>
+                <p>🌍 Arizona</p>
+                <p>Last Update: <span id="lastModified"></span></p>
+            </div>
+          </footer>
+      
+          <script>
+            document.getElementById('lastModified').textContent = document.lastModified;
+        </script>
+      
+      <script src="scripts/chamberweath.js" ></script>
+      <script src="scripts/spotlight.js" ></script>
+
+          </body>
+      </html>
+
+
+
+  
