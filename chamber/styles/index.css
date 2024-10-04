@@ -196,6 +196,22 @@ nav a {
     color: #007bff;
     text-decoration: none;
   }
+
+  figure {
+    width: 150px; 
+    margin: 0 auto; 
+    text-align: center; 
+  }
+  
+  #weather-icon {
+    width: 90px; 
+    height: auto; 
+  }
+  
+  figcaption {
+    font-size: 0.9rem; 
+    color: #555; 
+  }
   
 
 footer {

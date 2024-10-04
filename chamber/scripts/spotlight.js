@@ -9,16 +9,15 @@ const members = [
     { name: "Style Avenue", address: "404 Taylor St, Lakeside", phone: "555-7777", website: "https://www.styleavenue.com", image: "style_avenue_logo.png", membershipLevel: 2, description: "Your favorite destination for the latest fashion trends." }
   ];
   
-  // Filter members who are Silver (2) or Gold (3) level
+  
   const qualifiedMembers = members.filter(member => member.membershipLevel === 2 || member.membershipLevel === 3);
   
-  // Function to randomly select 2 or 3 members
+  
   function getRandomMembers(arr, num) {
     const shuffled = [...arr].sort(() => 0.5 - Math.random());
     return shuffled.slice(0, num);
   }
   
-  // Function to display the spotlight members
   function displaySpotlightMembers() {
     const spotlightContainer = document.getElementById('spotlightContainer');
     const randomMembers = getRandomMembers(qualifiedMembers, 2 + Math.floor(Math.random() * 2)); // Randomly pick 2 or 3 members
@@ -27,7 +26,7 @@ const members = [
       const memberDiv = document.createElement('div');
       memberDiv.classList.add('spotlight-member');
       memberDiv.innerHTML = `
-        <img src="images/${member.image}" alt="${member.name} Logo">
+        
         <h3>${member.name}</h3>
         <p>${member.address}</p>
         <p>Phone: ${member.phone}</p>
@@ -38,6 +37,6 @@ const members = [
     });
   }
   
-  // Call the display function when the page loads
+  
   document.addEventListener('DOMContentLoaded', displaySpotlightMembers);
   
