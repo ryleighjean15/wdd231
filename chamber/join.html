@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Chamber - Ryleigh Rowell</title>
+    <link rel="stylesheet" href="styles/join.css">
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    
+    <header>
+        <div class="logo">
+            <img src="images/chamber.png" alt="Lakeside Chamber of Commerce">
+            <h1>Lakeside Chamber of Commerce</h1>
+        </div>
+        <nav>
+          <a href="https://ryleighjean15.github.io/wdd231/">Home</a>   
+          <a href="https://ryleighjean15.github.io/wdd231/chamber/index.html">Chamber</a>
+          <a href="https://github.com/ryleighjean15/wdd231">GitHub</a>
+          <a href="https://www.linkedin.com/in/ryleigh-rowell-947905277/">LinkedIn</a>
+          <a href="https://ryleighjean15.github.io/wdd231/chamber/directory.html">Directory</a>
+        </nav>
+    </header>
+
+    <main>
+       
+        <section>
+            <h2>Join the Chamber</h2>
+            <form method="get" action="thankyou.html">
+                
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" title="Enter your first name" required autocomplete="given-name">
+
+                
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" title="Enter your last name" required autocomplete="family-name">
+
+                
+                <label for="orgTitle">Organization Title</label>
+                <input type="text" id="orgTitle" name="orgTitle" title="Enter your organizational title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+
+               
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" title="Enter your email" placeholder="example@email.com" required autocomplete="email">
+
+                
+                <label for="mobile">Mobile Phone</label>
+                <input type="tel" id="mobile" name="mobile" title="Enter your mobile phone number" required autocomplete="tel">
+
+                
+                <label for="orgName">Organization Name</label>
+                <input type="text" id="orgName" name="orgName" title="Enter your organization's name" required autocomplete="organization">
+
+            
+                <label for="membership">Membership Level</label>
+                <select id="membership" name="membership" title="Select membership level" required>
+                    <option value="NP">NP Membership</option>
+                    <option value="Bronze">Bronze Membership</option>
+                    <option value="Silver">Silver Membership</option>
+                    <option value="Gold">Gold Membership</option>
+                </select>
+
+               
+                <label for="description">Organization Description</label>
+                <textarea id="description" name="description" title="Describe your organization"></textarea>
+
+                
+                <input type="hidden" id="timestamp" name="timestamp" value="">
+
+               
+                <input type="submit" value="Submit Application">
+            </form>
+        </section>
+
+        
+        <section class="membership-cards">
+            <div class="card" id="bronzeCard">
+                <h3>Bronze Membership</h3>
+                <a href="#" onclick="showModal('bronze')">Learn More</a>
+            </div>
+            <div class="card" id="silverCard">
+                <h3>Silver Membership</h3>
+                <a href="#" onclick="showModal('silver')">Learn More</a>
+            </div>
+            <div class="card" id="goldCard">
+                <h3>Gold Membership</h3>
+                <a href="#" onclick="showModal('gold')">Learn More</a>
+            </div>
+            <div class="card" id="npCard">
+                <h3>Non-Profit Membership</h3>
+                <a href="#" onclick="showModal('np')">Learn More</a>
+            </div>
+        </section>
+
+        
+        <dialog id="bronzeModal">
+            <button onclick="closeModal('bronze')">X</button>
+            <h3>Bronze Membership Benefits</h3>
+            <ul>
+                <li><strong>Access to Networking Events:</strong> Participate in monthly networking events to connect with local businesses.</li>
+                <li><strong>Business Directory Listing:</strong> Your organization will be listed in our online directory, making it easier for other members and the community to find you.</li>
+                <li><strong>Event Discounts:</strong> Receive a 10% discount on Chamber-hosted events and seminars.</li>
+                <li><strong>Social Media Mentions:</strong> Get featured in quarterly posts on our social media platforms, reaching thousands of potential clients.</li>
+                <li><strong>Membership Badge:</strong> Display the Chamber’s Bronze Membership badge on your website and marketing materials.</li>
+            </ul>
+            <p>Bronze Membership is perfect for small businesses looking to gain visibility and network within the community at an affordable cost.</p>
+        </dialog>
+
+        <dialog id="silverModal">
+            <button onclick="closeModal('silver')">X</button>
+            <h3>Silver Membership Benefits</h3>
+            <ul>
+                <li><strong>Priority Access to Networking Events:</strong> Attend exclusive Chamber events with early access and reserved spots for Silver members.</li>
+                <li><strong>Enhanced Business Directory Listing:</strong> Your organization will be featured with a highlighted listing in our online business directory, gaining more visibility.</li>
+                <li><strong>Event Discounts:</strong> Enjoy a 20% discount on all Chamber-sponsored events, seminars, and workshops.</li>
+                <li><strong>Quarterly Business Spotlight:</strong> Get your business featured in our quarterly newsletter, which reaches thousands of subscribers.</li>
+                <li><strong>Social Media Promotion:</strong> Regular promotion of your business across the Chamber's social media platforms, including feature posts and event shoutouts.</li>
+                <li><strong>Free Admission to Select Events:</strong> Attend select Chamber events, such as business expos and seminars, for free.</li>
+                <li><strong>Membership Badge:</strong> Showcase your Silver Membership badge on your website and marketing materials to enhance credibility.</li>
+            </ul>
+            <p>The Silver Membership is ideal for businesses seeking enhanced exposure and deeper involvement in Chamber activities, with significant discounts and promotional opportunities.</p>
+        </dialog>
+
+        <dialog id="goldModal">
+            <button onclick="closeModal('gold')">X</button>
+            <h3>Gold Membership Benefits</h3>
+            <ul>
+                <li><strong>Exclusive VIP Access to Events:</strong> Enjoy VIP status at all Chamber events with reserved seating, priority registration, and exclusive invites to members-only events.</li>
+                <li><strong>Premium Business Directory Listing:</strong> Your business will receive a top-tier, featured listing in our online directory, ensuring maximum visibility.</li>
+                <li><strong>Event Sponsorship Opportunities:</strong> Be recognized as a sponsor at key Chamber events, increasing your business’s exposure and credibility.</li>
+                <li><strong>50% Discount on Events:</strong> Get a 50% discount on all Chamber events, seminars, and business expos.</li>
+                <li><strong>Monthly Business Spotlight:</strong> Get a dedicated feature in our monthly newsletter and social media channels, reaching thousands of local businesses and potential customers.</li>
+                <li><strong>Free Admission to All Events:</strong> Attend all Chamber events, seminars, and workshops free of charge.</li>
+                <li><strong>Website Banner Advertisement:</strong> Display a rotating banner ad for your business on the Chamber's homepage, driving traffic to your site.</li>
+                <li><strong>Membership Badge:</strong> Display your Gold Membership badge on your website and marketing materials, signifying premium status within the community.</li>
+            </ul>
+            <p>The Gold Membership is designed for businesses seeking maximum exposure and benefits, offering unparalleled promotional opportunities and VIP treatment at Chamber events.</p>
+        </dialog>
+
+        <dialog id="npModal">
+            <button onclick="closeModal('np')">X</button>
+            <h3>Non-Profit Membership Benefits</h3>
+            <ul>
+                <li><strong>Access to Networking Events:</strong> Participate in Chamber networking events, providing opportunities to connect with local businesses and community leaders.</li>
+                <li><strong>Business Directory Listing:</strong> Your nonprofit organization will be listed in the Chamber’s online directory, making it easier for community members and businesses to find you.</li>
+                <li><strong>Free Event Attendance:</strong> Attend select Chamber-hosted events at no cost, helping you build relationships and promote your mission.</li>
+                <li><strong>Volunteer Promotion:</strong> Gain visibility for your nonprofit’s volunteer opportunities by having them listed on the Chamber’s website and newsletters.</li>
+                <li><strong>Event Discount:</strong> Receive a 10% discount on Chamber-hosted events and workshops that can further your nonprofit’s impact and networking reach.</li>
+                <li><strong>Social Media Support:</strong> Get your organization’s mission and events promoted through the Chamber’s social media platforms, reaching a broad local audience.</li>
+                <li><strong>Membership Badge:</strong> Display the Chamber’s Nonprofit Membership badge on your website and promotional materials to enhance credibility and community support.</li>
+            </ul>
+            <p>The Nonprofit Membership is tailored for organizations looking to expand their outreach and connect with the local business community, with a focus on collaboration and support.</p>
+        </dialog>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Ryleigh Rowell</p>
+            <p>🌍 Arizona</p>
+            <p>Last Update: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+    <script>
+        
+        document.getElementById('timestamp').value = new Date().toISOString();
+
+    
+        function showModal(level) {
+            document.getElementById(level + 'Modal').showModal();
+        }
+        
+        function closeModal(level) {
+            document.getElementById(level + 'Modal').close();
+        }
+
+        
+        document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
+
+</body>
+
+</html>

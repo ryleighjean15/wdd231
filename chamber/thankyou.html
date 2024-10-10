@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Chamber Membership</title>
+    <link rel="stylesheet" href="styles/thankyou.css">
+    <script src="scripts/thankyou.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/chamber.png" alt="Lakeside Chamber of Commerce">
+            <h1>Lakeside Chamber of Commerce</h1>
+        </div>
+        <nav>
+          <a href="https://ryleighjean15.github.io/wdd231/">Home</a>   
+          <a href="https://ryleighjean15.github.io/wdd231/chamber/index.html">Chamber</a>
+          <a href="https://github.com/ryleighjean15/wdd231">GitHub</a>
+          <a href="https://www.linkedin.com/in/ryleigh-rowell-947905277/">LinkedIn</a>
+          <a href="https://ryleighjean15.github.io/wdd231/chamber/directory.html">Directory</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Thank You for Joining the Chamber!</h2>
+            <p>Your application has been submitted successfully. Here are the details you provided:</p>
+
+            <ul>
+                <li><strong>First Name:</strong> <span id="firstName"></span></li>
+                <li><strong>Last Name:</strong> <span id="lastName"></span></li>
+                <li><strong>Email:</strong> <span id="email"></span></li>
+                <li><strong>Mobile Phone:</strong> <span id="mobile"></span></li>
+                <li><strong>Organization:</strong> <span id="orgName"></span></li>
+                <li><strong>Submission Date:</strong> <span id="timestamp"></span></li>
+            </ul>
+
+            <p>We are excited to have you as a member. A confirmation email has been sent to the address you provided. We will contact you soon with more details.</p>
+
+            <a href="index.html" class="button">Return to Home</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Ryleigh Rowell</p>
+            <p>🌍 Arizona</p>
+            <p>Last Update: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+    <script>
+       
+        const urlParams = new URLSearchParams(window.location.search);
+
+        document.getElementById('firstName').textContent = urlParams.get('firstName');
+        document.getElementById('lastName').textContent = urlParams.get('lastName');
+        document.getElementById('email').textContent = urlParams.get('email');
+        document.getElementById('mobile').textContent = urlParams.get('mobile');
+        document.getElementById('orgName').textContent = urlParams.get('orgName');
+        document.getElementById('timestamp').textContent = urlParams.get('timestamp');
+
+        
+        document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
+</body>
+
+</html>
