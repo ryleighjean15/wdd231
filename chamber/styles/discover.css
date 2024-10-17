@@ -1,0 +1,126 @@
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  header img {
+    max-width: 50px;
+    vertical-align: middle;
+  }
+  
+  header h1 {
+    display: inline-block;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Grid Layout */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .sidebar {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border: 1px solid #ddd;
+  }
+  /* Calendar Styles */
+.calendar-box {
+    margin-top: 20px;
+  }
+  
+  .calendar {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+  .calendar th, .calendar td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .calendar th {
+    background-color: #f4f4f4;
+  }
+  
+  .calendar td {
+    background-color: #fff;
+  }
+  
+  .calendar td:hover {
+    background-color: #ddd;
+    cursor: pointer;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .photo-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .photo-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .photo-container img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Mobile View */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .photo-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .photo-container img:hover {
+      transform: none;
+    }
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  footer p {
+    margin: 5px;
+  }
+  

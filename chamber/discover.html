@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>WDD 231 - Discover page - Ryleigh Rowell</title>
+        <meta name="description" content="WDD131 - Dynamic Web Fundamentals - Ryleigh Rowell - home page with about info, place of residence, and links to web resources.">
+        <meta name="author" content="Ryleigh Rowell">
+        <meta property="og:title" content="WDD 231 Directory Page" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="file:///Users/ryleighrowell/wdd231/images/az_img2.jpg" />
+        <meta property="og:url" content="https://www.facebook.com/" />
+        <link rel="stylesheet" href="styles/discover.css">
+        <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/main.min.css' rel='stylesheet' />
+        <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/main.min.js'></script>
+
+    </head>
+
+    <body>
+        <header>
+            <div class="logo">
+                <img src="images/chamber.png" alt="Lakeside Chamber of Commerce">
+                <h1>Lakeside Chamber of Commerce</h1>
+            </div>
+            <nav>
+              <a href="https://ryleighjean15.github.io/wdd231/">Home</a>   
+              <a href="https://ryleighjean15.github.io/wdd231/chamber/index.html">Chamber</a>
+              <a href="https://github.com/ryleighjean15/wdd231">GitHub</a>
+              <a href="https://www.linkedin.com/in/ryleigh-rowell-947905277/">LinkedIn</a>
+              <a href="https://ryleighjean15.github.io/wdd231/chamber/directory.html">Directory</a>
+              <a href="https://ryleighjean15.github.io/wdd231/chamber/join.html">Join</a>
+            </nav>
+        </header>
+        <div class="grid-container">
+          <aside class="sidebar">
+            <div class="welcome-message" id="welcomeMessage"></div>
+
+            <div class="event-box">
+              <h2>Upcoming Events</h2>
+              <p><p>October 20, 2024 - Fall Festival at the Park.
+                Celebrate the changing seasons with food trucks, live music, and fun activities for the whole family.
+                Time: 12:00 PM - 6:00 PM
+                Location: Central Park</p>
+                
+                <p>October 25, 2024 - Local Art Exhibition.       
+                Featuring works from local artists, this exhibition showcases modern and traditional styles in an intimate gallery setting.
+                Time: 4:00 PM - 8:00 PM
+                Location: Downtown Art Gallery</p>
+                
+                <p>November 1, 2024 - Photography Workshop.
+                Learn the basics of outdoor photography with professional photographer Sarah Rivers. Open to all skill levels.
+                Time: 9:00 AM - 12:00 PM
+                Location: Riverside Pavilion</p>
+                <br>
+            </div>
+            <div class="calendar-box">
+                <h2>Event Calendar</h2>
+                <table class="calendar">
+                    <thead>
+                      <tr>
+                        <th>Su</th>
+                        <th>Mo</th>
+                        <th>Tu</th>
+                        <th>We</th>
+                        <th>Th</th>
+                        <th>Fr</th>
+                        <th>Sa</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                      </tr>
+                      <tr>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                      </tr>
+                      <tr>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                      </tr>
+                      <tr>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td>31</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </aside>
+            
+              
+      
+          <main class="gallery">
+            <h1>Local Photo Gallery</h1>
+            <div class="photo-container">
+              <img class="lazy" img src="images/parade.jpg" alt="Photo 1" />
+              <img class="lazy" img src="images/pumpkinpatch.jpg" alt="Photo 2" />
+              <img class="lazy" img src="images/artfestival.jpg" alt="Photo 3" />
+              <img class="lazy" img src="images/rim.jpg" alt="Photo 4" />
+              <img class="lazy" img src="images/facepaint.jpg" alt="Photo 5" />
+              <img class="lazy" img src="images/carnival.jpg" alt="Photo 6" />
+            </div>
+          </main>
+        </div>
+
+        <footer>
+            <div class="footer-container">
+                <p>&copy; 2025 Ryleigh Rowell</p>
+                <p>🌍 Arizona</p>
+                <p>Last Update: <span id="lastModified"></span></p>
+            </div>
+          </footer>
+      
+          <script>
+            document.getElementById('lastModified').textContent = document.lastModified;
+        </script>
+        <script src="discover.js"></script>
+      </body>
+      </html>
