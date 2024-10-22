@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Healthy Living Hub</title>
+        <meta name="description" content="WDD131 - Dynamic Web Fundamentals - Ryleigh Rowell - home page with about info, place of residence, and links to web resources.">
+        <meta name="author" content="Ryleigh Rowell">
+        <link rel="stylesheet" href="styles/siteplan.css">
+        <link rel="icon" href="images/favicon.ico">
+        <script src="scripts/siteplan.js" defer></script>
+    </head>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header, footer {
+            background-color: #84d897;
+            color: rgb(8, 5, 5);
+            padding: 1em;
+            text-align: center;
+}
+ 
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .content h2 {
+            color: #6a1b9a;
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .content img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+        .activity {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        .hidden {
+            display: none;
+        }
+      
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="healthy living logo">
+        <h1>Mental Wellness</h1>
+            
+
+            <nav>
+                <ul class="navigation">
+                    <li><a href="siteplan.html">Home</a></li>
+                    <li><a href="recipes.html">Healthy Recipes</a></li>
+                    <li><a href="workouts.html">Workout Routines</a></li>
+                    <li><a href="mental_wellness.html">Mental Wellness</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+        
+    </header>
+    
+    <div class="content">
+        <h2>Welcome to Mental Wellness</h2>
+        <p>Mental wellness is essential for a balanced, healthy life. Our goal is to provide you with resources and tips to improve your mental health.</p>
+        <img src="images/mentalwellness.jpg" alt="Mental Wellness Image">
+    </div>
+
+    <section>
+        <h3>Meditation Practices</h3>
+        <p><p>Meditation is a powerful tool for achieving mental clarity and emotional stability. By focusing your mind and practicing mindfulness, you can reduce stress, enhance self-awareness, and foster a deeper sense of inner peace. Whether you are a beginner or an experienced practitioner, exploring various meditation techniques can help you find the practice that best suits your needs and lifestyle.</p></p>
+    </section>
+
+    <section>
+        <h4>Therapeutic Hobbies</h4>
+        <p>Engaging in therapeutic hobbies such as journaling, painting, and other creative activities can significantly enhance mental well-being. Journaling provides an outlet for expressing emotions and organizing thoughts, helping to reduce stress and anxiety. Painting and other artistic pursuits foster creativity and mindfulness, allowing individuals to focus on the present moment and experience a sense of accomplishment. These hobbies offer a healthy escape from daily pressures, promote relaxation, and contribute to overall mental health.</p>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const activityList = document.getElementById('activityList');
+            const addActivityBtn = document.getElementById('addActivityBtn');
+            const activityForm = document.getElementById('activityForm');
+            const saveActivityBtn = document.getElementById('saveActivityBtn');
+            const activityNameInput = document.getElementById('activityName');
+
+            let activities = JSON.parse(localStorage.getItem('activities')) || [];
+
+            function displayActivities() {
+                activityList.innerHTML = '';
+                activities.forEach((activity, index) => {
+                    const activityDiv = document.createElement('div');
+                    activityDiv.className = 'activity';
+                    activityDiv.innerHTML = `
+                        <p>${activity.name}</p>
+                        <button onclick="deleteActivity(${index})">Delete</button>
+                    `;
+                    activityList.appendChild(activityDiv);
+                });
+            }
+
+            function addActivity() {
+                const activityName = activityNameInput.value.trim();
+                if (activityName) {
+                    const newActivity = { name: activityName };
+                    activities.push(newActivity);
+                    localStorage.setItem('activities', JSON.stringify(activities));
+                    displayActivities();
+                    activityForm.classList.add('hidden');
+                } else {
+                    alert('Activity name cannot be empty.');
+                }
+            }
+
+            function deleteActivity(index) {
+                activities.splice(index, 1);
+                localStorage.setItem('activities', JSON.stringify(activities));
+                displayActivities();
+            }
+
+            addActivityBtn.addEventListener('click', () => {
+                activityForm.classList.remove('hidden');
+            });
+
+            saveActivityBtn.addEventListener('click', addActivity);
+
+            displayActivities();
+        });
+
+        // Function to be accessed by delete button in innerHTML
+        function deleteActivity(index) {
+            activities.splice(index, 1);
+            localStorage.setItem('activities', JSON.stringify(activities));
+            displayActivities();
+        }
+    </script>
+
+<div class="container">
+    <button id="addActivityBtn">Add New Activity</button>
+    <div id="activityList"></div>
+    <div id="activityForm" class="hidden">
+        <h2>Add a New Activity</h2>
+        <label for="activityName">Activity Name:</label>
+        <input type="text" id="activityName" name="activityName">
+        <button id="saveActivityBtn">Save Activity</button>
+    </div>
+</div>    
+
+<footer>
+    <p>&copy; <span id="currentYear"></span> Healthy Living Hub | Ryleigh Rowell</p>
+</footer>
+<script>
+    document.getElementById('lastModified').textContent = document.lastModified;
+</script>
+</body>
+</html>

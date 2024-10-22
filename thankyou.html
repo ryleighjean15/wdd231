@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        /* Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+        /* Global Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f0f8ff; /* Light background */
+            color: #333;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Main Container */
+        .thankyou-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            margin: 20px;
+        }
+
+        /* Headline Style */
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #007acc; /* Blue theme */
+        }
+
+        /* Form Data Section */
+        #formData {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        #formData p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        /* Buttons Styling */
+        .btn-home {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #007acc;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-home:hover {
+            background-color: #005f99; /* Darker blue on hover */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            .thankyou-container {
+                padding: 20px;
+            }
+            #formData {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="thankyou-container">
+        <h1>Thank You for Joining!</h1>
+        <div id="formData">
+            <!-- Dynamic content will be injected here by JavaScript -->
+        </div>
+        <a href="siteplan.html" class="btn-home">Return to Home</a>
+    </div>
+
+    <script>
+        // Function to extract URL parameters
+        const getFormData = () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const name = urlParams.get('name');
+            const email = urlParams.get('email');
+            const organization = urlParams.get('organization');
+            const membershipLevel = urlParams.get('membershipLevel');
+            
+            // Display form data
+            const formDataDiv = document.getElementById('formData');
+            formDataDiv.innerHTML = `
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Organization:</strong> ${organization}</p>
+                <p><strong>Membership Level:</strong> ${membershipLevel}</p>
+            `;
+        };
+
+        // Call the function to display form data on page load
+        window.onload = getFormData;
+    </script>
+</body>
+</html>
