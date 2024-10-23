@@ -97,3 +97,15 @@ const setupModal = (item, index) => {
     });
 };
 
+// Get all navigation links
+const navLinks = document.querySelectorAll('nav ul li a');
+
+// Get the current page's path
+const currentPage = window.location.pathname;
+
+// Loop through each link and compare the href to the current page
+navLinks.forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+    }
+});

@@ -30,6 +30,12 @@ nav a:hover {
     text-decoration: underline;
   }
 
+.nav ul li a.active {
+    color: #007acc;
+    border-bottom: 2px solid #007acc;
+    font-weight: bold;
+}
+
 h1, h2, h3, h4 {
     font-family: Georgia, serif;
     text-align: center;
@@ -111,7 +117,7 @@ img {
 
 .trip {
     position: relative;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     text-align: center;
-    
+    font-family: 'Dancing Script', cursive; 
 }

@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You</title>
     <style>
-        /* Google Fonts */
+        
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
-        /* Global Styling */
+        
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: #f0f8ff; /* Light background */
+            background: #f0f8ff; 
             color: #333;
             text-align: center;
             display: flex;
@@ -22,7 +22,7 @@
             min-height: 100vh;
         }
 
-        /* Main Container */
+       
         .thankyou-container {
             background-color: white;
             padding: 40px;
@@ -33,14 +33,14 @@
             margin: 20px;
         }
 
-        /* Headline Style */
+       
         h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
-            color: #007acc; /* Blue theme */
+            color: #007acc; 
         }
 
-        /* Form Data Section */
+        
         #formData {
             font-size: 1.2em;
             margin-top: 20px;
@@ -51,7 +51,7 @@
             line-height: 1.6;
         }
 
-        /* Buttons Styling */
+        
         .btn-home {
             display: inline-block;
             padding: 10px 20px;
@@ -65,10 +65,10 @@
         }
 
         .btn-home:hover {
-            background-color: #005f99; /* Darker blue on hover */
+            background-color: #005f99; 
         }
 
-        /* Responsive Design */
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2em;
@@ -92,7 +92,7 @@
     </div>
 
     <script>
-        // Function to extract URL parameters
+        
         const getFormData = () => {
             const urlParams = new URLSearchParams(window.location.search);
             const name = urlParams.get('name');
@@ -100,7 +100,7 @@
             const organization = urlParams.get('organization');
             const membershipLevel = urlParams.get('membershipLevel');
             
-            // Display form data
+            
             const formDataDiv = document.getElementById('formData');
             formDataDiv.innerHTML = `
                 <p><strong>Name:</strong> ${name}</p>
@@ -110,7 +110,7 @@
             `;
         };
 
-        // Call the function to display form data on page load
+        
         window.onload = getFormData;
     </script>
 </body>
