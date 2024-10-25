@@ -137,9 +137,12 @@ header img {
 }
 
 
-/* .trip {
-    position: relative;
-    font-size: 1.8rem;
-    text-align: center;
-    font-family: 'Dancing Script', cursive; 
-} */
+.sociallinks img{
+    width: 60px;
+    justify-content: space-between;
+}
+
+.sociallinks {
+    display: flex;
+    justify-content: space-around;
+}
