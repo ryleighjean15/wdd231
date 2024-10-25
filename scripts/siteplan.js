@@ -14,6 +14,14 @@
 // function calculateBmi(weight, height) {
 //     return weight / (height * height);
 // }
+document.addEventListener('DOMContentLoaded', () => {
+    const currentPage = window.location.href; // Get the current page URL
+    localStorage.setItem('lastVisitedPage', currentPage); // Store it in localStorage
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('lastModified').textContent = document.lastModified;
+});
 
 
 import { fetchData, displayItems } from './modules/data.js';
@@ -97,13 +105,13 @@ const setupModal = (item, index) => {
     });
 };
 
-// Get all navigation links
+
 const navLinks = document.querySelectorAll('nav ul li a');
 
-// Get the current page's path
+
 const currentPage = window.location.pathname;
 
-// Loop through each link and compare the href to the current page
+
 navLinks.forEach(link => {
     if (link.getAttribute('href') === currentPage) {
         link.classList.add('active');
